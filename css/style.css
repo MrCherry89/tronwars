@@ -1,0 +1,282 @@
+body,
+html {
+  overflow-x: hidden;
+  font-family: "Space Grotesk", sans-serif;
+}
+body.overflow,
+html.overflow {
+  overflow: hidden !important;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+input,
+textarea {
+  border: none;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+  background: none;
+}
+button:focus {
+  outline: none;
+  border: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+}
+a:hover {
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
+
+.wrapper {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main {
+  min-height: 100vh;
+  overflow-y: auto;
+  padding: 50px 0;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .main {
+    padding: 30px 0px;
+    padding-bottom: 80px;
+  }
+}
+.main:after {
+  content: "";
+  background: url(../img/main-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  .main:after {
+    background-position: left center;
+  }
+}
+.main .logo {
+  margin-bottom: 120px;
+}
+@media (max-width: 767px) {
+  .main .logo {
+    margin-bottom: 50px;
+  }
+}
+.main .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+.main .items .item {
+  margin-right: 12px;
+  background: #000;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+.main .items .item b {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  display: block;
+  color: #f64176;
+}
+.main .items .item span {
+  font-size: 14px;
+  color: white;
+  font-weight: 300;
+}
+.main h1 {
+  font-family: "Rubik";
+  font-weight: 900;
+  font-size: 60px;
+  color: white;
+  text-transform: uppercase;
+  max-width: 360px;
+}
+@media (max-width: 767px) {
+  .main h1 {
+    font-size: 40px;
+  }
+}
+.main p {
+  max-width: 590px;
+  font-size: 18px;
+  font-weight: 300;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .main p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+.main .total-wrap {
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.main .total-wrap .total {
+  font-size: 16px;
+  font-weight: 300;
+  margin-left: 20px;
+  color: white;
+}
+.main .total-wrap .total span {
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+}
+.main .buy-btn {
+  background: #ee3a79;
+  background: linear-gradient(27deg, #ee3a79 0%, #ee3a79 0%, #a30293 100%);
+  font-size: 22px;
+  color: white;
+  padding: 17px 50px;
+  border-radius: 100px;
+  position: relative;
+  z-index: 0;
+}
+@media (max-width: 767px) {
+  .main .buy-btn {
+    padding: 12px 40px;
+    font-size: 20px;
+  }
+}
+.main .buy-btn:after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  left: -5px;
+  background: #ee3a79;
+  background: linear-gradient(27deg, #ee3a79 0%, #ee3a79 0%, #a30293 100%);
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 100px;
+  z-index: -1;
+}
+.main .buy-btn:hover:after {
+  opacity: 0.3;
+}
+
+.product-count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.product-count button {
+  min-width: 42px;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  border: 1px solid #c81e86;
+}
+.product-count button img {
+  margin: auto;
+}
+.product-count input {
+  width: 70px;
+  height: 42px;
+  border-radius: 10px;
+  background: #151515;
+  padding: 0 5px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  margin: 0 10px;
+}
+.product-count input::-webkit-input-placeholder {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+.product-count input::-moz-placeholder {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+.product-count input:-ms-input-placeholder {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+.product-count input:-moz-placeholder {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Black.woff2") format("woff2"), url("../fonts/Rubik-Black.woff") format("woff"), url("../fonts/Rubik-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*# sourceMappingURL=style.css.map */
