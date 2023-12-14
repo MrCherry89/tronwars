@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="css/magnific-popup.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -27,7 +27,7 @@
           </div>
           <div class="item">
             <b>PRICE</b>
-            <span>0,99 ETH</span>
+            <span>From $1500</span>
           </div>
         </div>
         <h1>TRONWARS minted</h1>
@@ -49,13 +49,38 @@
               <img src="img/plus.svg" alt="" />
             </button>
           </div>
-          <div class="total">Total: <span>0.6942</span> ETH</div>
+          <div class="total">Total: $1500</div>
         </div>
-        <a href="#" class="buy-btn">Buy NFT</a>
+        <a href="#popup" class="buy-btn popup">Make a bid</a>
       </div>
     </div>
 
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/script.js"></script>
+
+    <div id="popup" class="mfp-hide white-popup mfp-with-anim main-popup">
+      <div class="popup-body">
+        <button title="Close (Esc)" type="button" class="mfp-close"></button>
+        <div class="popup-info">
+          <h3>Make a bid</h3>
+          <form>
+            <label for="email">
+              <span>E-mail</span>
+              <input
+                type="email"
+                placeholder="Enter your e-mail"
+                name="email"
+              />
+            </label>
+            <label for="text">
+              <span>Your bid</span>
+              <input type="text" placeholder="min: $1500" name="text" />
+            </label>
+            <button type="button" class="buy-btn">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

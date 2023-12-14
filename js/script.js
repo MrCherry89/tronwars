@@ -38,4 +38,9 @@ $(document).ready(function () {
       .val(number)
       .change();
   });
+
+  $(".popup").magnificPopup({
+    type: "inline",
+    mainClass: "mfp-fade",
+  });
 });

@@ -82,6 +82,7 @@ a:focus {
   .main {
     padding: 30px 0px;
     padding-bottom: 80px;
+    background: #0b0b0b;
   }
 }
 .main:after {
@@ -99,7 +100,10 @@ a:focus {
 }
 @media (max-width: 767px) {
   .main:after {
-    background-position: left center;
+    background: url(../img/main-bg-mobile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
   }
 }
 .main .logo {
@@ -184,7 +188,8 @@ a:focus {
   font-weight: 300;
   color: white;
 }
-.main .buy-btn {
+
+.buy-btn {
   background: #ee3a79;
   background: linear-gradient(27deg, #ee3a79 0%, #ee3a79 0%, #a30293 100%);
   font-size: 22px;
@@ -195,12 +200,12 @@ a:focus {
   z-index: 0;
 }
 @media (max-width: 767px) {
-  .main .buy-btn {
+  .buy-btn {
     padding: 12px 40px;
     font-size: 20px;
   }
 }
-.main .buy-btn:after {
+.buy-btn:after {
   content: "";
   position: absolute;
   top: -5px;
@@ -214,7 +219,7 @@ a:focus {
   border-radius: 100px;
   z-index: -1;
 }
-.main .buy-btn:hover:after {
+.buy-btn:hover:after {
   opacity: 0.3;
 }
 
@@ -266,6 +271,90 @@ a:focus {
   color: white;
 }
 .product-count input:-moz-placeholder {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+#popup {
+  max-width: 590px;
+  width: 100%;
+  margin: 0 auto;
+}
+#popup .popup-body {
+  border-radius: 10px;
+  width: 100%;
+  background: #181818;
+  padding: 30px;
+  position: relative;
+  z-index: 0;
+}
+@media (max-width: 767px) {
+  #popup .popup-body {
+    padding: 30px 20px;
+  }
+}
+#popup .popup-body .mfp-close {
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  z-index: 10;
+  width: 25px;
+  height: 25px;
+}
+@media (max-width: 767px) {
+  #popup .popup-body .mfp-close {
+    right: 15px;
+    top: 15px;
+  }
+}
+#popup .popup-body .mfp-close:after {
+  content: "";
+  background: url(../img/close.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#popup .popup-body .popup-info h3 {
+  color: white;
+  font-weight: 900;
+  margin-bottom: 16px;
+  font-family: "Rubik";
+  text-transform: uppercase;
+  font-size: 32px;
+}
+#popup .popup-body .popup-info form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+#popup .popup-body .popup-info form .buy-btn {
+  margin-top: 22px;
+  align-self: flex-start;
+}
+#popup .popup-body .popup-info form label {
+  margin-bottom: 10px;
+}
+#popup .popup-body .popup-info form label input {
+  padding: 0 20px;
+  border-radius: 10px;
+  background: #121212;
+  height: 50px;
+  width: 100%;
+}
+#popup .popup-body .popup-info form label span {
+  display: block;
+  margin-bottom: 6px;
   font-size: 20px;
   font-weight: 500;
   color: white;
